@@ -2,13 +2,49 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
+}
 
+
+::-webkit-scrollbar {
+    width: 0;
 }
 
 .container{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+}
+
+.nav {
+    font-size: 25px;
+    margin: 10px;
+}
+
+#about {
+    position: fixed;
+    writing-mode: vertical-lr;
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
+
+#Links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0%;
+    bottom: 50%;
+    transform: translate(0, 50%);
+    text-align: center;
+
+}
+
+#name {
+    position: fixed;
+    font-size: 18px;
+    top:0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 section {
