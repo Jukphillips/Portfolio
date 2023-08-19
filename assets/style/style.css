@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Oswald&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -16,12 +19,20 @@
     height: 100vh;
 }
 
+.landing {
+    font-family: 'Nanum Myeongjo', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .nav {
     font-size: 25px;
     margin: 5px;
 }
 
 #about {
+    font-family: 'Oswald', sans-serif;
     position: fixed;
     writing-mode: vertical-lr;
     bottom: 50%;
@@ -44,9 +55,12 @@ img {
 
 }
 
-
+#project1{
+    font-family: 'Oswald', sans-serif;
+}
 
 #name {
+    font-family: 'Nanum Myeongjo', serif;
     position: fixed;
     font-size: 18px;
     top:0;
