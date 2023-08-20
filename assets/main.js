@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 const nameType = document.getElementById("nameType");
 const cursorType = document.getElementById("cursor")
-const webDev = document.getElementById('')
+const about = document.getElementById('about')
+const links = document.getElementById('Links')
 // typewrite animation 
 
 function sleep(ms) {
@@ -21,7 +22,10 @@ const writeType = async () => {
     console.log(phrase)
     cursorType.style.animationPlayState = "paused"
     cursorType.style.opacity = 0;
-
+    console.log(about)
+    console.log(links)
+    about.style.visibility = "visible";
+    links.style.visibility = "visible";
 };
 
 writeType();
