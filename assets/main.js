@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+// import * as THREE from 'three';
 const nameType = document.getElementById("nameType");
 const cursorType = document.getElementById("cursor")
 const about = document.getElementById('about')

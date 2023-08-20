@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Myeongjo&family=Oswald&display=swap');
 
 *{
     margin: 0;
@@ -54,6 +53,33 @@
     visibility: hidden;
 }
 
+.aboutText {
+    margin: 30px;
+}
+
+#aboutSection {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#aboutHello {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    position: relative;
+    left: -20%;
+
+}
+
+#aboutStudy {
+    font-size: 18px;
+    width: 375px;
+}
+
+#aboutWork {
+    position: relative;
+    left: 20%;
+}
 
 .nav {
     font-size: 25px;
