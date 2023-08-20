@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-    background-color: black;
+    background-color: #181818;
     color: white;
 }
 
@@ -21,8 +21,16 @@
 }
 
 #cursor{
-    animation: blink 1s linear;
+    font-size: 40px;
+    animation: blink 1s;
+    animation-iteration-count: 9;
     animation-play-state: running;
+}
+
+
+
+#nameType {
+    font-size: 40px;
 }
 
 .container{
@@ -38,9 +46,31 @@
 }
 
 
+
 .nav {
     font-size: 25px;
     margin: 5px;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-delay: 9.5s;
+    animation-fill-mode: forwards;
+    
+}
+
+#name {
+    visibility: hidden;
+}
+
+
+#webDev 
+    {
+    margin-top: 10px;
+    font-weight: bold;
+    opacity: 0;
+    animation: flyIn 1s linear;
+    animation-delay: 9.5s;
+    animation-fill-mode: forwards;
+
 }
 
 #about {
@@ -88,6 +118,27 @@ section {
     scroll-snap-align: start;
 }
 
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%)
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes blink {
     0% {
         opacity: 100%;
@@ -96,4 +147,5 @@ section {
     50% {
         opacity: 0%;
     }
+
 }

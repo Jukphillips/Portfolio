@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 const nameType = document.getElementById("nameType");
 const cursorType = document.getElementById("cursor")
+const webDev = document.getElementById('')
 // typewrite animation 
 
 function sleep(ms) {
@@ -8,16 +9,19 @@ function sleep(ms) {
 }
 
 const phrase = "Justin Phillips";
-let sleepTime = 200;
+let sleepTime = 600;
 
 const writeType = async () => {
     
     for (let i = 0; i < phrase.length; i++) {
       nameType.innerText = phrase.substring(0, i + 1);
         await sleep(sleepTime) 
-    }
+    };
+
+    console.log(phrase)
     cursorType.style.animationPlayState = "paused"
     cursorType.style.opacity = 0;
+
 };
 
 writeType();
