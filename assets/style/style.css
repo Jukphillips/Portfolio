@@ -6,11 +6,23 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: black;
+    color: white;
 }
 
 
 ::-webkit-scrollbar {
     width: 0;
+}
+
+#parentType {
+    display: flex;
+    flex-direction: row;
+}
+
+#cursor{
+    animation: blink 1s linear;
+    animation-play-state: running;
 }
 
 .container{
@@ -74,4 +86,14 @@ section {
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
 }
