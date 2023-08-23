@@ -10,22 +10,22 @@
 
 <body>
 
+    
+    <div class="active" id="container">
+
     <p class="nav" id="about"> about</p>
     <h1 class="nav" id="name"> Justin Phillips</h1>
-    <div id="Links"> 
-        <img src="./assets/images/email.png" class="nav" id="email" alt="email icon"> 
+    <div id="Links">
+        <img src="./assets/images/email.png" class="nav" id="email" alt="email icon">
         <img src="./assets/images/github.png" class="nav" id="github" alt="github icon">
         <img src="./assets/images/Linkedin.png" class="nav" id="Linkedin" alt="Linkedin icon">
     </div>
-
-    
-    <div class="container">
        
        <section class="landing">
         <div id="parentType">
          <span id="nameType"></span><span id="cursor">|</span>
         </div>
-         <p id="webDev">  Web Developer </p>
+         <p class="webDevAni" id="webDev">  Web Developer </p>
        </section>
 
        <section class="project1">
@@ -42,24 +42,30 @@
 
         <section class="project4">
             <h1> Project 4</h1>
-        </section>
-
-        <section id="aboutSection">
-            <div></div>
-          <h1 class="aboutText" id="aboutHello">Hello I'm Justin.</h1>
-
-          <p class="aboutText" id="aboutStudy">I'm currently studying to become a full-stack web developer,
-            with an emphasis on JavaScript frameworks. Currently working on development projects with local
-            companies to showcase my potential! 
-          </p>
-
-          <p class="aboutText" id="aboutWork"> Don't Be Shy, Take a Look At My Projects While Your Here ;)</p>
-
-
-        </section>
-       
-       
+        </section>   
     </div>
+
+    <section class='inactive' id="aboutSection">
+        <div></div>
+        <h1 class="aboutText" id="aboutHello">Hello I'm Justin.</h1>
+
+        
+        <p class="aboutText" id="aboutStudy">I'm currently studying to become a full-stack web developer,
+            with an emphasis on JavaScript frameworks. Currently working on development projects with local
+            companies to showcase my potential!
+        </p>
+        <p  id="close"> close </p>
+        <p class="aboutText" id="aboutWork"> Don't Be Shy, Take a Look At My Projects While Your Here ;)</p>
+        
+        <div id="containLinks">
+            <p class="aboutLinks"> Resume </p>
+            <p class="aboutLinks"> Linkedin </p>
+            <p class="aboutLinks"> Github </p>
+        </div>
+        
+    </section>
+
+
     <script type="module" src="./assets/main.js" > </script>
     </body>
 </html>

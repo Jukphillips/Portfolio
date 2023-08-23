@@ -7,6 +7,10 @@ const aboutHello = document.getElementById('aboutHello')
 const aboutStudy = document.getElementById('aboutStudy')
 const aboutWork = document.getElementById('aboutWork')
 const aboutText = document.getElementsByClassName('aboutText')
+const aboutSec = document.getElementById('aboutSection')
+const container = document.getElementById('container')
+const closeBtn = document.getElementById('close')
+const webDev = document.getElementById('webDev')
 // typewrite animation 
 
 function sleep(ms) {
@@ -34,18 +38,32 @@ const writeType = async () => {
 
 function aboutSection() {
 
+    container.classList.remove('active')
+    container.classList.add('inactive')
+    aboutSec.classList.remove('inactive')
+    aboutSec.classList.add('active')
+    closeBtn.style.visibility = "visible"
+
     for(var i = 0; i < aboutText.length; i++){
         
         aboutText[i].style.animation = 'flySide 2s, fadeIn 2s';
         aboutText[i].style.animationFillMode = 'forwards';
         aboutText[i].style.animationDelay = (i * 2) + 's';
-        console.log(document.location)
-        // console.log(aboutText[i].style.animationDelay = (i * 2) + 's')
+
     }
-    // create html about section 
-    // hide visibility
-    //use javascript to close whatever content is on the page and show about section
-    //switch "about" to "exit"
+}
+
+function closeAbout () {
+
+    closeBtn.style.visibility = "hidden"
+    container.classList.remove('inactive')
+    container.classList.add('active')
+    aboutSec.classList.remove('active')
+    aboutSec.classList.add('inactive')
+    webDev.classList.remove('webDevAni')
+    webDev.style.opacity = 100 
+    cursorType.style.visibility = 'hidden'
+
 }
 
 writeType();
@@ -54,3 +72,4 @@ writeType();
 
 
 about.addEventListener("click", aboutSection)
+closeBtn.addEventListener('click', closeAbout)
