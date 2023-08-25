@@ -11,6 +11,8 @@ const aboutSec = document.getElementById('aboutSection')
 const container = document.getElementById('container')
 const closeBtn = document.getElementById('close')
 const webDev = document.getElementById('webDev')
+const webDevAni = document.getElementById('webDevAni')
+const fadeIn = document.getElementsByClassName('fadeIn')
 // typewrite animation 
 
 function sleep(ms) {
@@ -60,9 +62,14 @@ function closeAbout () {
     container.classList.add('active')
     aboutSec.classList.remove('active')
     aboutSec.classList.add('inactive')
-    webDev.classList.remove('webDevAni')
     webDev.style.opacity = 100 
     cursorType.style.visibility = 'hidden'
+    console.log(webDev)
+    webDev.style.animationDelay = 0 + 's'
+
+    for(var i = 0; i < fadeIn.length; i++ ){
+        fadeIn[i].style.animationDelay = 0 + 's';
+    }
 
 }
 

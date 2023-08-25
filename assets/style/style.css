@@ -64,8 +64,8 @@
     opacity: 0;
     padding: 10px;
     background:
-        linear-gradient(to left, white 5px, transparent 4px) 100% 76%,
-        linear-gradient(to top, white 5px, transparent 4px) 100% 80%;
+        linear-gradient(to left, white 5px, transparent 4px) 100% 100%,
+        linear-gradient(to top, white 5px, transparent 4px) 100% 100%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
 }
@@ -78,6 +78,7 @@
 
 #aboutHello {
     font-family: 'Bebas Neue', sans-serif;
+    padding-right: 20px;
     font-size: 40px;
     position: relative;
     left: -20%;
@@ -114,29 +115,28 @@
     margin: 5px;
     opacity: 70%;
     cursor: pointer;
-    animation: fadeIn 4s;
-    animation-delay: 9s;
+
 }
 
-
+.fadeIn {
+    animation: fadeIn 5.5s;
+    animation-delay: 9s;
+}
 
 #name {
     visibility: hidden;
 }
 
 
-#webDev 
-    {
+#webDev {
     margin-top: 10px;
     font-weight: bold;
     opacity: 0;
-}
-
-.webDevAni {
     animation: flyIn 1s linear;
     animation-delay: 9.5s;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
 }
+
 
 #about {
     font-family: 'Oswald', sans-serif;
@@ -181,6 +181,18 @@ section {
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+}
+
+#containLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutLinks {
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(82, 79, 79);
+    text-decoration: underline;
 }
 
 @keyframes flyIn {
