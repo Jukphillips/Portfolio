@@ -37,11 +37,24 @@
 #nameType {
     font-size: 40px;
 }
+ 
+#downButton {
+    font-size: 40px;
+    position: fixed;
+    bottom: 5%;
+    cursor: pointer;
+
+}
 
 #container{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+}
+
+#landing {
+    display: flex;
+    flex-direction: row;
 }
 
 .landing {
@@ -134,7 +147,7 @@
     opacity: 0;
     animation: flyIn 1s linear;
     animation-delay: 9.5s;
-    /* animation-fill-mode: forwards; */
+    animation-fill-mode: forwards;
 }
 
 
@@ -186,6 +199,11 @@ section {
 #containLinks {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
+}
+
+.aboutLinks:hover{
+    color: white;
 }
 
 .aboutLinks {
