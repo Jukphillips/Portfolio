@@ -16,6 +16,7 @@ const fadeIn = document.getElementsByClassName('fadeIn')
 const downButton = document.getElementById('downButton')
 const project1Con = document.getElementById('project1Con')
 // typewrite animation 
+let page  = 0;
 
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -76,13 +77,44 @@ function closeAbout () {
 
 }
 
+function arrowDown () {
+    if ( page == 0) {
+        page += 1
+        console.log(page)
+    } else if ( page >= 1 && page < 4 ) {
+        page += 1
+        console.log(page)
+    } else if (page = 4) {
+        page += 0
+
+    }
+}
+
+function arrowUp() {
+    if (page <= 4 && page > 0){
+        page -= 1 
+        console.log(page)
+    } else if (page = 0 ){
+        page -= 0 
+        console.log(page)
+    }
+
+}
+
 writeType();
 
-
+document.addEventListener("keydown", function(event) {
+    if(event.code == "ArrowDown") {
+        arrowDown()
+    } else if (event.code == "ArrowUp") {
+        arrowUp()
+    }
+} )
 
 downButton.addEventListener("click", function() {
     project1Con.scrollIntoView({behavior: "smooth"})
     downButton.style.visibility = "hidden"
+    arrowDown()
 })
 about.addEventListener("click", aboutSection)
 closeBtn.addEventListener('click', closeAbout)
