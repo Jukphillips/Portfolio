@@ -9,6 +9,10 @@
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 ::-webkit-scrollbar {
     width: 0;
@@ -22,7 +26,7 @@
 #cursor{
     font-size: 40px;
     animation: blink 1s;
-    animation-iteration-count: 9;
+    animation-iteration-count: 5;
     animation-play-state: running;
 }
 
@@ -43,7 +47,11 @@
     position: fixed;
     bottom: 5%;
     cursor: pointer;
+    opacity: 70%;
+}
 
+#downButton:hover {
+    opacity: 100%;
 }
 
 #container{
@@ -68,7 +76,8 @@
 }
 
 #about,
-#Links {
+#Links,
+#downButton {
     visibility: hidden;
 }
 
@@ -133,7 +142,7 @@
 
 .fadeIn {
     animation: fadeIn 5.5s;
-    animation-delay: 9s;
+    animation-delay: 5s;
 }
 
 #name {
@@ -146,7 +155,7 @@
     font-weight: bold;
     opacity: 0;
     animation: flyIn 1s linear;
-    animation-delay: 9.5s;
+    animation-delay: 5.5s;
     animation-fill-mode: forwards;
 }
 
@@ -200,6 +209,9 @@ section {
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    position: relative;
+    bottom: -5%;
+    left: -30%;
 }
 
 .aboutLinks:hover{
@@ -209,7 +221,7 @@ section {
 .aboutLinks {
     padding: 10px;
     font-family: 'Oswald', sans-serif;
-    color: rgb(82, 79, 79);
+    color: rgb(107, 105, 105);
     text-decoration: underline;
 }
 

@@ -13,6 +13,8 @@ const closeBtn = document.getElementById('close')
 const webDev = document.getElementById('webDev')
 const webDevAni = document.getElementById('webDevAni')
 const fadeIn = document.getElementsByClassName('fadeIn')
+const downButton = document.getElementById('downButton')
+const project1Con = document.getElementById('project1Con')
 // typewrite animation 
 
 function sleep(ms) {
@@ -20,7 +22,7 @@ function sleep(ms) {
 }
 
 const phrase = "Justin Phillips";
-let sleepTime = 600;
+let sleepTime = 350;
 
 const writeType = async () => {
     
@@ -36,6 +38,7 @@ const writeType = async () => {
     console.log(links)
     about.style.visibility = "visible";
     links.style.visibility = "visible";
+    downButton.style.visibility = "visible";
 };
 
 function aboutSection() {
@@ -77,6 +80,9 @@ writeType();
 
 
 
-
+downButton.addEventListener("click", function() {
+    project1Con.scrollIntoView({behavior: "smooth"})
+    downButton.style.visibility = "hidden"
+})
 about.addEventListener("click", aboutSection)
 closeBtn.addEventListener('click', closeAbout)
