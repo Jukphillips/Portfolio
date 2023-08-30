@@ -16,7 +16,7 @@ const fadeIn = document.getElementsByClassName('fadeIn')
 const downButton = document.getElementById('downButton')
 const project1Con = document.getElementById('project1Con')
 // typewrite animation 
-let page  = 0;
+
 
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -32,11 +32,8 @@ const writeType = async () => {
         await sleep(sleepTime) 
     };
 
-    console.log(phrase)
     cursorType.style.animationPlayState = "paused"
     cursorType.style.opacity = 0;
-    console.log(about)
-    console.log(links)
     about.style.visibility = "visible";
     links.style.visibility = "visible";
     downButton.style.visibility = "visible";
@@ -77,29 +74,41 @@ function closeAbout () {
 
 }
 
-function arrowDown () {
-    if ( page == 0) {
-        page += 1
-        console.log(page)
-    } else if ( page >= 1 && page < 4 ) {
-        page += 1
-        console.log(page)
-    } else if (page = 4) {
-        page += 0
+const sections = document.getElementsByClassName('project')
+let currentPage = 0;
+const projects = Array.from(sections)
+const body = document.body
+// console.log(projects)
 
-    }
+function MouseWheelHandler(e) {
+    console.log("in function Mouse")
+    
+    setTimeout ( function() {
+        e.preventDefault();
+        e.stopPropagation()
+        return false
+    }, 3000 )
+
+    console.log(currentPage = currentPage + 1)
+    
+}
+
+function arrowDown () {
+
+    currentPage = Math.min(currentPage + 1, (projects.length + 1) - 1)
+    console.log(currentPage)
+    console.log(projects)
 }
 
 function arrowUp() {
-    if (page <= 4 && page > 0){
-        page -= 1 
-        console.log(page)
-    } else if (page = 0 ){
-        page -= 0 
-        console.log(page)
-    }
 
+    currentPage = Math.max(currentPage - 1, 0)
+    console.log(currentPage)
 }
+
+
+
+
 
 writeType();
 
@@ -109,7 +118,16 @@ document.addEventListener("keydown", function(event) {
     } else if (event.code == "ArrowUp") {
         arrowUp()
     }
+
 } )
+
+body.addEventListener("wheel", MouseWheelHandler, {passive: false });
+// document.addEventListener("wheel", (event) => {
+//     const delta = Math.sign(event.deltaY);
+//     if (delta < 0 ){
+//          X
+//     }
+// })
 
 downButton.addEventListener("click", function() {
     project1Con.scrollIntoView({behavior: "smooth"})
