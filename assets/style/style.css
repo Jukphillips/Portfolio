@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Myeongjo&family=Oswald&family=Pacifico&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Nanum+Myeongjo&family=Oswald&family=Pacifico&family=Staatliches&display=swap');
 
 *{
     margin: 0;
@@ -165,7 +165,9 @@ html {
     position: fixed;
     writing-mode: vertical-lr;
     bottom: 50%;
-    transform: translate(0, 50%);
+    left: 5%;
+    transform: translate(-50, 50%);
+    z-index: 2;
 }
 
 img {
@@ -181,6 +183,7 @@ img {
     bottom: 50%;
     transform: translate(0, 50%);
     text-align: center;
+    z-index: 2;
 
 }
 
@@ -223,6 +226,67 @@ section {
     font-family: 'Oswald', sans-serif;
     color: rgb(107, 105, 105);
     text-decoration: underline;
+}
+
+.projectImg {
+    height: 50%;
+    width: 100%;
+}
+
+
+.imgPrev {
+
+    left: 67%;
+}
+
+.imgNext {
+    left: 70%;
+}
+.imgPrev, .imgNext {
+    cursor: pointer;
+    margin: 3px;
+    position: absolute;
+    
+    bottom: 20%;
+    width: auto;
+    color: white;
+    user-select: none;
+    opacity: 50%;
+    background: transparent;
+}
+
+.imgPrev:hover, .imgNext:hover {
+    opacity: 100%;
+}
+
+.project {
+    position: relative;
+    z-index: 1;
+}
+
+
+#project2Name {
+    font-family: 'Staatliches', cursive;
+    line-height: 60px;
+    font-size: 70px;
+    position: absolute;
+    left: 12%;
+    text-align: right;
+    width: 20%;
+    background-color: transparent;
+    margin-bottom: 10px;
+
+}
+
+#project2Text {
+    position: absolute;
+    left: 20%;
+    bottom: 37%;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 20%;
+    background-color: transparent;
+    /* margin: 5px;  */
 }
 
 @keyframes flyIn {
