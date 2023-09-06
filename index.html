@@ -29,59 +29,76 @@
             <a class="fadeIn" id="downButton"> &#8595; </a>
        </section>
        <section id="project1Con" class="project">
-            <h1 id="project1"> Project 1</h1>
-                <div class="projectSlides">
+            <h1 id="project1Name"> Project 1</h1>
+            <div class="project1">
+                <div class="projectSlides1">
                     <img class="projectImg">
                 </div>
-                <div class="projectSlides">
+                <div class="projectSlides1">
                     <img class="projectImg">
                 </div>
-                <div class="projectSildes">
+                <div class="projectSlides1">
                     <img class="projectImg">
                 </div>
 
-                <a class="imgPrev">&#10094;</a>
-                <a class="imgNext">&#10095;</a>
+                <a class="imgPrev" data-section=0 data-id=-1>&#10094;</a>
+                <a class="imgNext" data-section=0 data-id=1>&#10095;</a>
+                </br>
+                <div class="dashes">
+                    <span class="dash" > | </span>
+                    <span class="dash" > | </span>
+                    <span class="dash"> | </span>
+                </div>
+            </div>
        </section>
 
-        <section id="project2" class="project"> 
-
+        <section class="project"> 
             <h1 id="project2Name"> Weather App: </h1>
             <p id="project2Text"> React, Material UI, NodeJS</p>
-
-                <div class="projectSlides">
-                    <img src="./assets/images/loadingImg.jpg" class="projectImg">
+            <div class="project2">
+                <div class="projectSlides2">
+                    <img src="./assets/images/loadingImg.jpg" height="612px" width="408px" class="projectImg">
                 </div>
-                <!-- <div class="projectSlides">
-                    <img class="projectImg">
+                <div class="projectSlides2">
+                    <img src="./assets/images/astronaut.jpg" height="612px" width="408px" class="projectImg">
                 </div>
-                <div class="projectSildes">
-                    <img class="projectImg">
+                <div class="projectSlides2">
+                    <img src="./assets/images/rock.png" height="612px" width="408px" class="projectImg">
                 </div>
-                 -->
-                <a class="imgPrev">&#10094;</a>
-                <a class="imgNext">&#10095;</a>
+                
+                <a class="imgPrev" data-section=1 data-id=-1  >&#10094;</a>
+                <a class="imgNext" data-section=1 data-id=1 >&#10095;</a>
+                </br>
+                <div class="dashes">
+                    <span class="dash" onclick="currentSlide(1, 1)"> | </span>
+                    <span class="dash" onclick="currentSlide(2, 1)"> | </span>
+                    <span class="dash" onclick="currentSlide(3, 1)"> | </span>
+                </div>
+            </div>
         </section>
 
-        <section id="project3" class="project">
+        <section  class="project">
             <h1> Project 3</h1>
-                <div class="projectSlides">
+            <div class="project3">
+                <div class="projectSlides3">
                     <img class="projectImg">
                 </div>
-                <div class="projectSlides">
+                <div class="projectSlides3">
                     <img class="projectImg">
                 </div>
-                <div class="projectSildes">
+                <div class="projectSlides3">
                     <img class="projectImg">
                 </div>  
                 <a class="imgPrev">&#10094;</a>
                 <a class="imgNext">&#10095;</a>
+                </br>
+                <div class="dashes">
+                    <span class="dash" onclick="currentSlide(1, 2)"> | </span>
+                    <span class="dash" onclick="currentSlide(2, 2)"> | </span>
+                    <span class="dash" onclick="currentSlide(3, 2)"> | </span>
+                </div>
+            </div>    
         </section> 
-    </br>
-
-        <span class="dash"> | </span>
-        <span class="dash"> | </span>
-        <span class="dash"> | </span>
     </div>
 
     <section class='inactive' id="aboutSection">

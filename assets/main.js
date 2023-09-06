@@ -15,6 +15,8 @@ const webDevAni = document.getElementById('webDevAni')
 const fadeIn = document.getElementsByClassName('fadeIn')
 const downButton = document.getElementById('downButton')
 const project1Con = document.getElementById('project1Con')
+const imgPrevs = document.querySelectorAll(".imgPrev")
+const imgNexts = document.querySelectorAll(".imgNext")
 // typewrite animation 
 
 
@@ -78,10 +80,10 @@ const sections = document.getElementsByClassName('project')
 let currentPage = 0;
 const projects = Array.from(sections)
 const body = document.body
-// console.log(projects)
+
 
 function MouseWheelHandler(e) {
-    console.log("in function Mouse")
+    // console.log("in function Mouse")
     
     setTimeout ( function() {
         e.preventDefault();
@@ -89,26 +91,71 @@ function MouseWheelHandler(e) {
         return false
     }, 3000 )
 
-    console.log(currentPage = currentPage + 1)
+    // console.log(currentPage = currentPage + 1)
     
 }
 
 function arrowDown () {
 
     currentPage = Math.min(currentPage + 1, (projects.length + 1) - 1)
-    console.log(currentPage)
-    console.log(projects)
+
 }
 
 function arrowUp() {
 
     currentPage = Math.max(currentPage - 1, 0)
-    console.log(currentPage)
+    
 }
 
+let slideIndex = [0, 1] ;
+console.log(slideIndex)
+let slideId = ["projectSlides1", "projectSlides2", "projectSlides3"]
+// showSlides(1, 0)
+showSlides(1, 1)
+// showSlides(1, 2)
 
+function showSlides(n, no){
+    // n is the slide page
+    // no is the slideshow page
+    let x = document.getElementsByClassName(slideId[no])
+    let xSlide = Array.from(x)
 
+    if( n > xSlide.length) {
+        slideIndex[no] = 1
+    } if (n < 1 ) {
+        slideIndex[no] = xSlide.length
+    }
+    for(let i = 0; i < xSlide.length; i++){
+        console.log(x[i])
+        xSlide[i].style.display = "none";
+    }
+    
+    xSlide[slideIndex[no] - 1].style.display = "block";
+}
 
+function plusSlides(n, no) {
+
+    slideIndex[no] += n
+  showSlides(slideIndex[no], no);
+}
+
+function handleImgPrev(event) {
+    console.log(event.target.dataset)
+    plusSlides(parseInt(event.target.getAttribute('data-id')), parseInt(event.target.getAttribute('data-section')))
+}
+
+function handleImgNext(event) {
+    console.log(event.target.dataset)
+    plusSlides(parseInt(event.target.getAttribute('data-id')), parseInt(event.target.getAttribute('data-section')))
+}
+
+imgPrevs.forEach(imgPrev => {
+    imgPrev.addEventListener('click', handleImgPrev)
+})
+
+imgNexts.forEach(imgNext => {
+    imgNext.addEventListener('click', handleImgNext)
+})
 
 writeType();
 
