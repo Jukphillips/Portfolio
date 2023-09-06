@@ -17,6 +17,7 @@ const downButton = document.getElementById('downButton')
 const project1Con = document.getElementById('project1Con')
 const imgPrevs = document.querySelectorAll(".imgPrev")
 const imgNexts = document.querySelectorAll(".imgNext")
+const dashes = document.querySelectorAll(".dash")
 // typewrite animation 
 
 
@@ -115,8 +116,7 @@ showSlides(1, 1)
 // showSlides(1, 2)
 
 function showSlides(n, no){
-    // n is the slide page
-    // no is the slideshow page
+    console.log(n, no)
     let x = document.getElementsByClassName(slideId[no])
     let xSlide = Array.from(x)
 
@@ -133,28 +133,38 @@ function showSlides(n, no){
     xSlide[slideIndex[no] - 1].style.display = "block";
 }
 
+function currentSlide(n, no) {
+    console.log(n, no)
+    slideIndex[no] = n
+    showSlides(slideIndex[no], no)
+}
+
 function plusSlides(n, no) {
 
     slideIndex[no] += n
   showSlides(slideIndex[no], no);
 }
 
-function handleImgPrev(event) {
+function handleDash(event) {
+    console.log(event.target.dataset)
+    currentSlide(parseInt(event.target.getAttribute('data-id')), parseInt(event.target.getAttribute('data-section')))
+}
+
+function handleImg(event) {
     console.log(event.target.dataset)
     plusSlides(parseInt(event.target.getAttribute('data-id')), parseInt(event.target.getAttribute('data-section')))
 }
 
-function handleImgNext(event) {
-    console.log(event.target.dataset)
-    plusSlides(parseInt(event.target.getAttribute('data-id')), parseInt(event.target.getAttribute('data-section')))
-}
+dashes.forEach(dash => {
+    dash.addEventListener('click', handleDash)
+})
 
 imgPrevs.forEach(imgPrev => {
-    imgPrev.addEventListener('click', handleImgPrev)
+    imgPrev.addEventListener('click', handleImg)
 })
 
 imgNexts.forEach(imgNext => {
-    imgNext.addEventListener('click', handleImgNext)
+    imgNext.addEventListener('click', handleImg)
 })
 
 writeType();
