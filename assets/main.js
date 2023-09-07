@@ -109,12 +109,12 @@ function arrowUp() {
     
 }
 
-let slideIndex = [0, 1] ;
+let slideIndex = [1, 1, 2] ;
 console.log(slideIndex)
 let slideId = ["projectSlides1", "projectSlides2", "projectSlides3"]
-// showSlides(1, 0)
+showSlides(0, 0)
 showSlides(1, 1)
-// showSlides(1, 2)
+showSlides(1, 2)
 
 function showSlides(n, no){
     console.log(n, no)
@@ -131,6 +131,12 @@ function showSlides(n, no){
         xSlide[i].style.display = "none";
     }
     
+    console.log(n, no)
+    console.log(xSlide)
+    console.log(slideIndex)
+    console.log(slideIndex[no] - 1)
+    console.log(slideIndex[no])
+    console.log(xSlide[slideIndex[no] - 1])
     xSlide[slideIndex[no] - 1].style.display = "block";
 }
 
@@ -140,8 +146,9 @@ function currentSlide(n, no) {
     showSlides(slideIndex[no], no)
 }
 
-function plusSlides(n, no) {
 
+function plusSlides(n, no) {
+    console.log(n)
     slideIndex[no] += n
   showSlides(slideIndex[no], no);
 }
