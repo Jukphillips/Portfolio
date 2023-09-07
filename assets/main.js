@@ -18,6 +18,7 @@ const project1Con = document.getElementById('project1Con')
 const imgPrevs = document.querySelectorAll(".imgPrev")
 const imgNexts = document.querySelectorAll(".imgNext")
 const dashes = document.querySelectorAll(".dash")
+const projectImg = document.querySelectorAll(".projectSlide")
 // typewrite animation 
 
 
@@ -154,6 +155,11 @@ function handleImg(event) {
     console.log(event.target.dataset)
     plusSlides(parseInt(event.target.getAttribute('data-id')), parseInt(event.target.getAttribute('data-section')))
 }
+console.log(projectImg)
+
+projectImg.forEach(slide => {
+    slide.addEventListener('click', handleImg)
+})
 
 dashes.forEach(dash => {
     dash.addEventListener('click', handleDash)

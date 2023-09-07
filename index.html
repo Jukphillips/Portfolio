@@ -57,13 +57,13 @@
             <p id="project2Text"> React, Material UI, NodeJS</p>
             <div class="project2">
                 <div class="projectSlides2">
-                    <img src="./assets/images/loadingImg.jpg" height="612px" width="408px" class="projectImg">
+                    <img src="./assets/images/loadingImg.jpg" data-section=1 data-id=1 class="projectImg projectSlide">
                 </div>
                 <div class="projectSlides2">
-                    <img src="./assets/images/astronaut.jpg" height="612px" width="408px" class="projectImg">
+                    <img src="./assets/images/astronaut.jpg" data-section=1 data-id=1 class="projectImg projectSlide">
                 </div>
                 <div class="projectSlides2">
-                    <img src="./assets/images/rock.png" height="612px" width="408px" class="projectImg">
+                    <img src="./assets/images/rock.png" data-section=1 data-id=1 class="projectImg projectSlide">
                 </div>
                 
                 <a class="imgPrev" data-section=1 data-id=-1  >&#10094;</a>
@@ -80,22 +80,22 @@
         <section  class="project">
             <h1> Project 3</h1>
             <div class="project3">
-                <div class="projectSlides3">
+                <div class="projectSlides3 projectSlide">
                     <img class="projectImg">
                 </div>
-                <div class="projectSlides3">
+                <div class="projectSlides3 projectSlide">
                     <img class="projectImg">
                 </div>
-                <div class="projectSlides3">
+                <div class="projectSlides3 projectSlide">
                     <img class="projectImg">
                 </div>  
-                <a class="imgPrev">&#10094;</a>
-                <a class="imgNext">&#10095;</a>
+                <a class="imgPrev" data-section=2 data-id=-1 >&#10094;</a>
+                <a class="imgNext" data-section=2 data-id=1>&#10095;</a>
                 </br>
                 <div class="dashes">
-                    <span class="dash" onclick="currentSlide(1, 2)"> | </span>
-                    <span class="dash" onclick="currentSlide(2, 2)"> | </span>
-                    <span class="dash" onclick="currentSlide(3, 2)"> | </span>
+                    <span class="dash" data-section=2 data-id=1> | </span>
+                    <span class="dash" data-section=2 data-id=2> | </span>
+                    <span class="dash" data-section=2 data-id=3> | </span>
                 </div>
             </div>    
         </section> 
