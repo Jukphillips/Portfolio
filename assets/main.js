@@ -109,10 +109,10 @@ function arrowUp() {
     
 }
 
-let slideIndex = [1, 1, 2] ;
+let slideIndex = [1, 1, 1] ;
 console.log(slideIndex)
 let slideId = ["projectSlides1", "projectSlides2", "projectSlides3"]
-showSlides(0, 0)
+showSlides(1, 0)
 showSlides(1, 1)
 showSlides(1, 2)
 
