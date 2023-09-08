@@ -269,7 +269,7 @@ section {
     display: none;
 }
 
-#project2Name {
+.projectName {
     font-family: 'Staatliches', cursive;
     line-height: 60px;
     font-size: 70px;
@@ -282,7 +282,7 @@ section {
 
 }
 
-#project2Text {
+.projectText {
     position: absolute;
     left: 20%;
     bottom: 37%;
